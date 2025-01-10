@@ -1,6 +1,5 @@
 HELP.md
 # ignoring .idea folder
-.idea
 *.class
 target/
 !.mvn/wrapper/maven-wrapper.jar
