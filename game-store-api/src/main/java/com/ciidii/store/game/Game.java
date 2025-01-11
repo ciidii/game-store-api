@@ -46,4 +46,8 @@ public class Game extends BaseEntity {
         this.wishLists.add(wishList);
         wishList.getGames().add(this);
     }
+    public void removeWishList(WishList wishList) {
+        this.wishLists.remove(wishList);
+        wishList.getGames().remove(this);
+    }
 }
