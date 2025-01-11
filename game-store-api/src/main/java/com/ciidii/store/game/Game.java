@@ -28,6 +28,7 @@ public class Game extends BaseEntity {
     private Category category;
 
     @OneToMany(mappedBy = "game")
+   // @OrderBy(value = "content")
     private List<Comment> comments;
 
     @ManyToMany(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
@@ -46,6 +47,7 @@ public class Game extends BaseEntity {
         this.wishLists.add(wishList);
         wishList.getGames().add(this);
     }
+
     public void removeWishList(WishList wishList) {
         this.wishLists.remove(wishList);
         wishList.getGames().remove(this);

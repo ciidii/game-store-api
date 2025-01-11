@@ -16,7 +16,7 @@ import lombok.Setter;
 @NoArgsConstructor
 @Entity
 public class Comment extends BaseEntity {
-    private String comment;
+    private String content;
 
     @ManyToOne
     @JoinColumn(name = "game_id")
